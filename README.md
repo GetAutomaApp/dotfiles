@@ -16,10 +16,10 @@ This command automatically runs `npm run config` if there where any changes in t
 ```json
 {
   "scripts": {
-    "update:submodules": "git submodule foreach --recursive 'branch=$(git remote show origin | awk \"/HEAD branch/ {print \\$NF}\"); git checkout $branch && git pull origin $branch' && CHANGED=$(git status --porcelain | grep '^ M \\.dotfiles' || true) && if [ -n \"$CHANGED\" ]; then npm run config; fi && git add . && git commit -m \"chore: update submodules\" || echo 'No changes to commit'"
+    "update:submodules": "git submodule foreach --recursive 'branch=$(git remote show origin | awk \"/HEAD branch/ {print \\$NF}\"); git checkout $branch && git pull origin $branch' && CHANGED=$(git status --porcelain | grep '^ M \\.dotfiles' || true) && if [ -n \"$CHANGED\" ]; then npm run config; fi && git add . && git commit -m \"chore: update submodules\" || echo 'No changes to commit'",
+    "lint": "swiftlint . --config=.swiftlint.yml"
   }
 }
 ```
 > [!NOTE]
-> If you're adding this to an existing repo where others have this cloned locally. Please ask them to run this command: `ggit submodule update --init --recursive`
-```
+> If you're adding this to an existing repo where others have this cloned locally. Please ask them to run this command: `git submodule update --init --recursive`
