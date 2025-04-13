@@ -2,4 +2,4 @@
 
 echo "Configuring SwiftLint"
 
-ln -s ./.swiftlint.yml ../.swiftlint.yml
+ln -s ./.dotfiles/.swiftlint.yml .swiftlint.yml
