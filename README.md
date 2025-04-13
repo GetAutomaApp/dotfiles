@@ -7,3 +7,7 @@ Each project that exists in the Automa project should do the following:
 "config": "./.dotfiles/config.sh"
 "install:all": "previous commands... npm run config"
 ```
+
+> [!NOTE]
+> Any repo you clone that already has the dotfiles included clone via this command: `git clone <repo> --recursive` 
+
