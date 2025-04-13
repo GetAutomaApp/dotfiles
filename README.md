@@ -11,11 +11,12 @@ Each project that exists in the Automa project should do the following:
 > [!NOTE]
 > Any repo you clone that already has the dotfiles included clone via this command: `git clone <repo> --recursive` 
 
-Add the following command to your package.json in order to update all the sub-modules in the repo
+Add the following command to your package.json in order to update all the sub-modules in the repo.
+This command automatically runs `npm run config` if there where any changes in the `.dotfiles` folder
 ```json
 {
   "scripts": {
-    "update-submodules": "git submodule foreach --recursive 'branch=$(git remote show origin | awk \"/HEAD branch/ {print \\$NF}\"); git checkout $branch && git pull origin $branch' && git add . && git commit -m \"chore: update submodules\" || echo 'No changes to commit'"
+    "update:submodules": "git submodule foreach --recursive 'branch=$(git remote show origin | awk \"/HEAD branch/ {print \\$NF}\"); git checkout $branch && git pull origin $branch' && CHANGED=$(git status --porcelain | grep '^ M \\.dotfiles' || true) && if [ -n \"$CHANGED\" ]; then npm run config; fi && git add . && git commit -m \"chore: update submodules\" || echo 'No changes to commit'"
   }
 }
 ```
