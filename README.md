@@ -20,3 +20,6 @@ This command automatically runs `npm run config` if there where any changes in t
   }
 }
 ```
+> [!NOTE]
+> If you're adding this to an existing repo where others have this cloned locally. Please ask them to run this command: `ggit submodule update --init --recursive`
+```
