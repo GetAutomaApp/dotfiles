@@ -91,4 +91,8 @@ type_name:
   max_length:
     warning: 50
 
+function_body_length:
+  warning: 100
+  error: 100
+
 reporter: github-actions-logging
