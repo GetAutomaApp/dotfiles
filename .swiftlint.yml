@@ -97,4 +97,8 @@ function_body_length:
   warning: 100
   error: 100
 
+closure_body_length:
+  warning: 100
+  error: 100
+
 reporter: github-actions-logging
