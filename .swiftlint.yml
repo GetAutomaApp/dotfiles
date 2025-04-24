@@ -43,7 +43,6 @@ opt_in_rules:
   - multiline_literal_brackets
   - multiline_parameters
   - multiline_parameters_brackets
-  - no_empty_block
   - number_separator
   - operator_usage_whitespace
   - prefer_key_path
@@ -109,9 +108,9 @@ file_name:
     - 'helper.swift' # TODO: Refactor code and rename so that file matches a type in file
     - 'helpers.swift' # TODO: Refactor code and rename so that file matches a type in file
     - 'Helpers.swift' # TODO: Refactor code and rename so that file matches a type in file
-    - '*+*.swift' # TODO: Refactor code and rename so that file matches a type in file
     - 'Fonts.swift' # Generated fonts for front-end
     - 'Initialization.swift' # TODO: Refactor to `FoundationExtensions.swift`,do same for extensions of other packages
   prefix_pattern: '.*/'
+  suffix_pattern: 'Extensions'
 
 reporter: github-actions-logging
