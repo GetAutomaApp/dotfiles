@@ -114,4 +114,9 @@ file_name:
   prefix_pattern: '.*/'
   suffix_pattern: 'Extensions'
 
+generic_type_name:
+  max_length: 
+    warning: 35
+    error: 35
+
 reporter: github-actions-logging
