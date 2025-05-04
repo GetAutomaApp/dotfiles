@@ -17,7 +17,8 @@ This command automatically runs `npm run config` if there where any changes in t
 {
   "scripts": {
     "update:submodules": "git submodule foreach --recursive 'branch=$(git remote show origin | awk \"/HEAD branch/ {print \\$NF}\"); git checkout $branch && git pull origin $branch' && CHANGED=$(git status --porcelain | grep '^ M \\.dotfiles' || true) && if [ -n \"$CHANGED\" ]; then npm run config; fi && git add -A && git commit -m \"chore: update submodules\" || echo 'No changes to commit'",
-    "lint": "swiftlint . --config=.swiftlint.yml"
+    "lint": "swiftlint . --config=.swiftlint.yml",
+    "format": "./.dotfiles/format.sh"
   }
 }
 ```

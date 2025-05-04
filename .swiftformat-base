@@ -1,0 +1,6 @@
+--maxwidth 120
+--allman false
+--indent 4
+--trimwhitespace always
+--disable redundantInternal
+--decimalgrouping 3,0
