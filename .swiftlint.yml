@@ -61,6 +61,7 @@ opt_in_rules:
   - unused_parameter
 
 excluded:
+  - "**/Package.swift" # Package.swift always has `explicit_acl` errors
   - "**/node_modules" # Exclude Node Modules (Performance Optimisation)
   - "**/.build" # Exclude all .build directories
   - "**/.index-build" # Exclude all .index-build directories
@@ -112,10 +113,12 @@ file_name:
     - "helper.swift" # TODO: Refactor code and rename so that file matches a type in file
     - "helpers.swift" # TODO: Refactor code and rename so that file matches a type in file
     - "Helpers.swift" # TODO: Refactor code and rename so that file matches a type in file
+    - "Errors.swift" # TODO: Refactor code and rename so that file matches a type in file
     - "Fonts.swift" # Generated fonts for front-end
     - "Initialization.swift" # TODO: Refactor to `FoundationExtensions.swift`,do same for extensions of other packages
     - "Tokens.swift" # Front-end design tokens
   prefix_pattern: ".*/"
+  suffix_pattern: "Extensions"
 
 generic_type_name:
   max_length:
