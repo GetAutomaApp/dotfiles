@@ -2,5 +2,7 @@
 --allman false
 --indent 4
 --trimwhitespace always
+--header "{file}\nCopyright (c) {year} GetAutomaApp\nAll source code and related assets are the property of GetAutomaApp.\nAll rights reserved."
 --disable redundantInternal
---decimalgrouping 3,0
+--disable trailingCommas
+--decimalgrouping 3,4
