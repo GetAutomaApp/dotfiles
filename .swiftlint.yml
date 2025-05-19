@@ -81,6 +81,10 @@ identifier_name:
   excluded:
     - id
     - vm
+    - dm
+    - v1
+    - v2
+    - ip
 
 cyclomatic_complexity:
   ignores_case_statements: true
