@@ -124,6 +124,14 @@ file_name:
   prefix_pattern: ".*/"
   suffix_pattern: "Extensions"
 
+explicit_acl:
+  excluded:
+    - "Package.swift"
+
+explicit_top_level_acl:
+  excluded:
+    - "Package.swift"
+
 generic_type_name:
   max_length:
     warning: 35
