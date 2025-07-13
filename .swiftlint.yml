@@ -110,6 +110,11 @@ file_length:
   warning: 500
   ignore_comment_only_lines: true
 
+file_length:
+  error: 500
+  warning: 500
+  ignore_comment_only_lines: true
+
 file_name:
   excluded:
     - "entrypoint.swift" # Vapor projects entrypoints
