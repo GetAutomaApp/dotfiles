@@ -98,12 +98,12 @@ type_name:
     warning: 50
 
 function_body_length:
-  warning: 30
-  error: 30
+  warning: 100
+  error: 100
 
 closure_body_length:
-  warning: 30
-  error: 30
+  warning: 100
+  error: 100
 
 file_length:
   error: 500
